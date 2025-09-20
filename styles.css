@@ -1,0 +1,29 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #111;
+  color: #fff;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.mining-animation img {
+  width: 200px;
+  margin: 30px 0;
+}
+
+.price-ticker {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.price-ticker span {
+  margin: 0 15px;
+  font-size: 1.2em;
+}
