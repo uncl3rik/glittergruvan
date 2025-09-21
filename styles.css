@@ -6,7 +6,7 @@ body {
   background: #0a192f; /* marine blue background */
   color: #e6f1ff; /* soft white text */
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'UnifrakturCook', cursive; /* Old English default */
 }
 
 .container {
@@ -33,8 +33,9 @@ h1 {
 .price-ticker span {
   margin: 0 15px;
   font-size: 1.3em;
-  color: #e6f1ff; /* soft white prices */
+  color: #e6f1ff;
   transition: color 0.3s;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* numbers clean */
 }
 
 .price-ticker span:hover {
