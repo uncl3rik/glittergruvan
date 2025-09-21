@@ -14,9 +14,14 @@ body {
 }
 
 h1 {
+h1 {
   color: #64ffda; /* aqua headline */
-  font-size: 2.5em;
+  font-size: 3em;
   margin-bottom: 20px;
+  font-family: 'UnifrakturMaguntia', cursive; /* extreme Old English just for title */
+  letter-spacing: 2px; /* makes it breathe a little */
+}
+
 }
 
 .mining-animation img {
@@ -41,3 +46,4 @@ h1 {
 .price-ticker span:hover {
   color: #4fd1c5; /* aqua hover effect */
 }
+
