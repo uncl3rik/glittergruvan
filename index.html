@@ -18,21 +18,24 @@
       <span id="sol">SOL: ...</span>
     </div>
   </div>
-  <script>
-    async function updatePrices() {
-      try {
-        const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=usd');
-        const data = await res.json();
-        document.getElementById('btc').textContent = `BTC: $${data.bitcoin.usd}`;
-        document.getElementById('eth').textContent = `ETH: $${data.ethereum.usd}`;
-        document.getElementById('sol').textContent = `SOL: $${data.solana.usd}`;
-      } catch (err) {
-        console.error('Error fetching prices:', err);
-      }
+  
+ <script>
+  async function updatePrices() {
+    try {
+      const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=sek');
+      const data = await res.json();
+      document.getElementById('btc').textContent = `BTC: ${data.bitcoin.sek.toLocaleString()} SEK`;
+      document.getElementById('eth').textContent = `ETH: ${data.ethereum.sek.toLocaleString()} SEK`;
+      document.getElementById('sol').textContent = `SOL: ${data.solana.sek.toLocaleString()} SEK`;
+    } catch (err) {
+      console.error('Error fetching prices:', err);
     }
-    updatePrices();
-    setInterval(updatePrices, 30000);
-  </script>
+  }
+  updatePrices();
+  setInterval(updatePrices, 30000);
+</script>
+
 </body>
 </html>
+
 
