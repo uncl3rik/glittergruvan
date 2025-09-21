@@ -1,12 +1,12 @@
-body {
-  display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  background: #0a192f;
+  color: #fff;
   background: #0a192f; /* marine blue background */
   color: #e6f1ff; /* soft white text */
   margin: 0;
-  font-family: 'UnifrakturCook', cursive; /* Old English default */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .container {
@@ -14,36 +14,24 @@ body {
 }
 
 h1 {
-h1 {
   color: #64ffda; /* aqua headline */
-  font-size: 3em;
+  font-size: 2.5em;
   margin-bottom: 20px;
-  font-family: 'UnifrakturMaguntia', cursive; /* extreme Old English just for title */
-  letter-spacing: 2px; /* makes it breathe a little */
-}
-
 }
 
 .mining-animation img {
   width: 200px;
   margin: 30px 0;
-}
-
-.price-ticker {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
+@@ -25,6 +32,11 @@ body {
 
 .price-ticker span {
   margin: 0 15px;
+  font-size: 1.2em;
   font-size: 1.3em;
-  color: #e6f1ff;
+  color: #e6f1ff; /* soft white prices */
   transition: color 0.3s;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* numbers clean */
 }
 
 .price-ticker span:hover {
   color: #4fd1c5; /* aqua hover effect */
 }
-
