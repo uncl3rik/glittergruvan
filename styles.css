@@ -3,7 +3,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: #111;
+  background: #0a192f;
   color: #fff;
   margin: 0;
 }
@@ -27,3 +27,4 @@ body {
   margin: 0 15px;
   font-size: 1.2em;
 }
+
