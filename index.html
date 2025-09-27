@@ -1,10 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glittergruvan</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
   <div class="container">
     <h1>Glittergruvan</h1>
     <div class="mining-animation">
-      <img src="mining-animation.png" alt="Mining Animation" />
-      <img src="mining-animation-removebg-preview.png" alt="Mining Animation" />
+      <img src="mining-animation.svg" alt="Mining Animation" />
     </div>
     <div class="price-ticker">
       <span id="btc">BTC: ...</span>
-@@ -39,3 +39,4 @@ <h1>Glittergruvan</h1>
+      <span id="eth">ETH: ...</span>
+      <span id="sol">SOL: ...</span>
+    </div>
+  </div>
+ <script>
+  async function updatePrices() {
+    try {
+      const res = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=sek');
+      const data = await res.json();
+      document.getElementById('btc').textContent = `BTC: ${data.bitcoin.sek.toLocaleString()} SEK`;
+      document.getElementById('eth').textContent = `ETH: ${data.ethereum.sek.toLocaleString()} SEK`;
+      document.getElementById('sol').textContent = `SOL: ${data.solana.sek.toLocaleString()} SEK`;
+    } catch (err) {
+      console.error('Error fetching prices:', err);
+    }
+  }
+  updatePrices();
+  setInterval(updatePrices, 30000);
+</script>
+
+</body>
 </html>
